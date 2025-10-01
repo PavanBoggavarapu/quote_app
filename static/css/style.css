@@ -1,0 +1,52 @@
+/* Soft gradient background */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Rounded card with shadow */
+.quote-card {
+    border: none;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Fade transition class */
+.fade-transition {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Quote text styling */
+#quote-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+    opacity: 1;
+}
+
+/* Author styling */
+#quote-author {
+    color: #667eea;
+    font-style: italic;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quote-card {
+        margin: 1rem;
+        border-radius: 15px;
+    }
+    
+    #quote-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* Alert styling for messages */
+#message-alert .alert {
+    border-radius: 10px;
+}

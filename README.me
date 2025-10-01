@@ -1,0 +1,58 @@
+# InspireMe: Quote of the Day Generator (Flask Web App)
+
+## 🎯 Project Overview
+Develop a Flask-based web application titled **"InspireMe: Quote of the Day Generator"**, which dynamically displays a new inspirational quote each time the page is refreshed or when the user clicks the **"Get New Quote"** button.
+
+The system stores a predefined list of motivational quotes within the Flask backend and uses **Jinja2 templating** to render them dynamically on the frontend.
+
+Users can also contribute their own quotes through a **Bootstrap modal form**, which are temporarily stored in memory and displayed as part of the rotating list.
+
+---
+
+## 🧩 Features
+- Displays a random quote on each page load.
+- **"Get New Quote"** button fetches new quotes instantly using AJAX.
+- Modal popup for users to submit their own quotes.
+- Confirmation page after quote submission.
+- Clean, responsive UI built with Bootstrap and minimal CSS.
+
+---
+
+## 🧠 Technologies Used
+| Layer | Technologies |
+|-------|---------------|
+| **Frontend** | HTML5, Bootstrap 5, CSS3, JavaScript, jQuery |
+| **Backend** | Python (Flask Framework) |
+| **Templating** | Jinja2 |
+| **Database** | Temporary in-memory list (extendable to SQLite/MySQL) |
+
+---
+
+## ⚙️ Workflow
+1. **User visits** the homepage (`/`)  
+   → Flask picks a random quote from the list and displays it.  
+2. **User clicks** “Get New Quote”  
+   → JavaScript sends AJAX request to `/new_quote` → returns a new random quote dynamically.  
+3. **User submits** a new quote via modal form  
+   → Data is sent to `/submit` route → added to the in-memory list.  
+4. **User redirected** to `/success`  
+   → Displays “Quote submitted successfully” message.  
+
+---
+
+## 🚀 Setup Instructions
+```bash
+# 1️⃣ Create and activate a virtual environment
+python -m venv venv
+venv\Scripts\activate   # (Windows)
+# or
+source venv/bin/activate  # (Mac/Linux)
+
+# 2️⃣ Install dependencies
+pip install -r requirements.txt
+
+# 3️⃣ Run the Flask app
+python app.py
+
+# 4️⃣ Open the app in your browser
+http://127.0.0.1:5000/
